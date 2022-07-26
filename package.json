@@ -1,0 +1,49 @@
+{
+  "name": "openshift-nodejs-client",
+  "version": "0.0.1",
+  "description": "OpenShift nodejs clien",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "test": "nyc mocha",
+    "process-swagger": "babel-node -x \".ts\" build/process-swagger.ts",
+    "build": "tsc -p ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgolovin/openshift-nodejs-client.git"
+  },
+  "keywords": [
+    "kubernetes",
+    "nodejs",
+    "openshift",
+    "openapi"
+  ],
+  "author": "Denis Golovin",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/dgolovin/openshift-nodejs-client/issues"
+  },
+  "homepage": "https://github.com/dgolovin/openshift-nodejs-client#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/jsonpath": "^0.2.0",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^18.0.3",
+    "@types/request": "^2.48.8",
+    "@types/tar": "^6.1.1",
+    "jsonpath": "^1.1.1",
+    "lodash": "^4.17.21",
+    "openapi-types": "^12.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@kubernetes/client-node": "0.17.0",
+    "minipass": "3.2.1",
+    "request": "^2.88.2"
+  }
+}
